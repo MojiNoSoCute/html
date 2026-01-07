@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link workshop</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(231, 231, 231);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: rgb(14, 176, 246);
+            text-align: center;
+        }
+
+        .subtitle {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card1 {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;            box-shadow : 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card1.module1 {
+            border-top : 4px solid #67b8db;
+        }
+        .card1.module2 {
+            border-top : 4px solid #67dba7;
+        }
+        .card1.module3 {
+            border-top : 4px solid #db6767;
+        }
+        .card1.module4 {
+            border-top : 4px solid #67b8db;
+        }
+        .card1.module5 {
+            border-top : 4px solid #d5db67;
+        }
+        .card1.module6 {
+            border-top : 4px solid #dbb467;
+        }
+        
+        .card2 {
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 0.5px solid rgb(224, 224, 224);
+            border-radius: 10px;
+            box-shadow : 2px 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .link-ext a{
+            color: purple;
+            text-decoration: none;
+        }
+
+        code {
+            padding: 2px;
+            border-radius: 5px;
+            background-color: #eeeeee;
+        }
+
+        pre {
+            margin: 20px 0;
+            background-color: #dedede;
+            border-left: 3px solid rgb(96, 161, 189);
+        }
+
+        .a-download {
+            line-height: 2.5;
+            text-decoration: none;
+            padding: 10px;
+            background-color: yellow;
+        }
+
+        .button-link {
+            line-height: 2.5;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 10px;
+            background-color: #11a7e8;
+            border: 0;
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+        }
+
+        .link-image img {
+            width: 200px;
+        }
+
+        .link-image img:hover {
+            width: 300px;
+            transition: 0.5s;
+            transform: rotate(45deg);
+        }
+
+        .note::before {
+            content: "☀️ ";
+        }
+
+        .note {
+            border-left: 3px solid red;
+            color: #808080;
+        }
+
+        .back-html {
+            text-decoration: none;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Workshop: Various Links</h1>
+        <p class="subtitle">เรียนรู้ลิงค์หลายรูปแบบพร้อมตัวอย่างและแบบฝึกหัด</p>
+
+        <div class="card-grid">
+            <!-- card 1 -->
+            <div class="card1 module1">
+                <h2>1. External Links</h2>
+                <div class="card2 link-ext">
+                    <a href="https://www.wikipedia.org/" target="_blank">visit Wikipedia</a>
+                    <p><code>target="_blank"</code> เปิดลิงค์ในแท็บใหม</p>
+                </div>
+                <div class="card2 link-ext">
+                    <a href="https://www.google.com/?hl=th" target="_self">visit Google</a>
+                    <p><code>target="_self"</code> เปิดลิงค์ในหน้าเดิม</p>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="card1 module2">
+                <h2>2. Internal links & Anchor Links</h2>
+                <pre>
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+&lt;a href="#jump"&gt;Jump to Section&lt;/a&gt;
+&lt;h3 id="jump"&gt;This is the jump target&lt;/h3&gt;
+                </pre>
+                <a href="#jump">Click to Jump</a>
+                <h3 id="jump">This is jump page</h3>
+            </div>
+
+            <!-- card 3 -->
+            <div class="card1 module3">
+                <h2>3. Email Links</h2>
+                <pre>
+&lt;a href="mailto:student@example.com?subject=Hello"&gt;
+Send an Email
+&lt;/a&gt;
+                </pre>
+                <a href="mailto:674259013@webmail.npru.ac.th?subject=Hello">Send an Email</a>
+            </div>
+
+            <!-- card 4 -->
+            <div class="card1 module4">
+                <h2>4. Download Links</h2>
+                <pre>
+&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;
+                </pre>
+                <a href="photo/google.png" download class="a-download">Download Text File</a>
+                <p>ต้องมีไฟล์ในโฟลเดอร์จึงจะสามารถดาวน์โหลดได้จริง</p>
+        </div>
+        </div>
+
+        <!-- card 5 -->
+        <div class="card1 module5">
+            <h2>5. Button Links</h2>
+            <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
+            <pre>
+&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;
+            </pre>
+            <a href="photo/google.png" class="button-link">Visit Website</a>
+            <p>สร้างปุ่มด้วยแท็ก <code>button</code></p>
+            <pre>
+&lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
+- มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
+- ผูกกับ DOM (document) โดยตรง
+&lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
+- นิยมใช้มากกว่า
+- เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
+- ผูกกับ window โดยตรง
+            </pre>
+            <button>HTML Tutorial</button>
+            <button>Visit Website</button>
+        </div>
+
+        <!-- card 6 -->
+        <div class="card1 module6">
+            <h2>6. Image Link</h2>
+            <p>คลิกที่รูปภาพเพื่อเปิดลิงก์</p>
+            <pre>
+&lt;a href="https://youtube.com"&gt;
+&lt;img src="images/sample.jpg" width="250"&gt;
+&lt;/a&gt;
+            </pre>
+            <div class="link-image"><a href="https://www.youtube.com/?hl=th&gl=TH&app=desktop" target="_blank" ><img src="https://cdn.marketingoops.com/wp-content/uploads/2017/08/youtube-new-logo.jpg" alt=""></a></div>
+            <p class="note">หากต้องการใช้รูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์ เช่น <code>images/photo.jpg</code></p>
+        </div>
+
+        <a href="index.html" class="back-html">&larr; Back to HTML Tutorial</a>
+    </div>
+</body>
+</html>
