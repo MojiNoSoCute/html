@@ -4,12 +4,15 @@
     padding: 0;
 }
 
-html {}
+html {
+    scroll-padding-top: 200px ;
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: aqua;
+    background-color: rgb(175, 240, 240);
 }
 
 /* Component styles */
@@ -17,24 +20,54 @@ body {
     max-width: 1200px;
     margin: 200px auto 100px;
     padding: 20px;
-    background-color: rgb(221, 221, 221);
 }
 
-.badge {}
+.badge {
+    background-color: #67b8db;
+    border-radius: 5px;
+    color: white;
+    padding: 3px 8px;
+    font-size: 16px;
+    font-weight: bold;
+    
+    vertical-align: middle;
+}
 
 pre {}
 
 code {}
 
-.card {}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
 
-.card.module {}
+.card.module1 {
+    border-top: 4px solid #67b8db;
+}
 
-.card.module {}
+.card.module2 {
+    border-top: 4px solid #67dba7;
+}
 
-.card.module {}
+.card.module3 {
+    border-top: 4px solid #db6767;
+}
 
-.card.module {}
+.card.module4 {
+    border-top: 4px solid #67b8db;
+}
+
+.card.module5 {
+    border-top: 4px solid #d5db67;
+}
+
+.card.module6 {
+    border-top: 4px solid #dbb467;
+}
 
 .note {}
 
@@ -42,7 +75,7 @@ code {}
 
 /* Group 1 */
 .header {
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(209, 232, 232);
     box-shadow: 5px 5px 15px rgb(167, 167, 167);
     padding: 20px;
 
@@ -66,27 +99,55 @@ code {}
 
 
 .btn-text-link li {
-    background-color: coral;
+    background-color: rgb(149, 204, 240);
     padding: 12px 20px;
     border-radius: 100%;
 }
 
 .btn-text-link li:hover {
-    background-color: rgb(210, 93, 50);
+    background-color: rgb(78, 143, 158);
     cursor: pointer;
 }
 
 /* Group 2 */
-.position1 img {
-    width: 500px;
+
+.position {
+    display: flex;
 }
 
-.position2 img {
-    width: 500px;
+.img-small {
+    width: 200px;
 }
 
-.position3 img {
-    width: 500px;
+.card.module1:hover .position.m3{
+    transition: 6s;
+    transform: translateX(920px);
+}
+
+.card.module1:hover .position.m2{
+    transition: 6s;
+    transform: translateX(460px);
+}
+
+code {
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+}
+
+pre {
+    margin: 20px 0;
+    background-color: #dedede;
+    border-left: 3px solid rgb(96, 161, 189);
+}
+
+.note::before {
+    content: "❤️ ";
+}
+
+.note {
+    border-left: 3px solid red;
+    color: #808080;
 }
 /* Group 3 */
 /* Group 4 */
