@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: aqua;
+}
+
+/* Component styles */
+.container {
+    max-width: 1200px;
+    margin: 200px auto 100px;
+    padding: 20px;
+    background-color: rgb(221, 221, 221);
+}
+
+.badge {}
+
+pre {}
+
+code {}
+
+.card {}
+
+.card.module {}
+
+.card.module {}
+
+.card.module {}
+
+.card.module {}
+
+.note {}
+
+.note::before {}
+
+/* Group 1 */
+.header {
+    background-color: rgb(243, 243, 243);
+    box-shadow: 5px 5px 15px rgb(167, 167, 167);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.btn-text-link {
+    list-style: none;
+    margin-top: 20px;
+
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.btn-text-link li {
+    background-color: coral;
+    padding: 12px 20px;
+    border-radius: 100%;
+}
+
+.btn-text-link li:hover {
+    background-color: rgb(210, 93, 50);
+    cursor: pointer;
+}
+
+/* Group 2 */
+.position1 img {
+    width: 500px;
+}
+
+.position2 img {
+    width: 500px;
+}
+
+.position3 img {
+    width: 500px;
+}
+/* Group 3 */
+/* Group 4 */
+/* Group 5 */
+/* Group 6 */
+/* Group 7 */
+/* Group 8 */
+/* Group 9 */
+/* Group 10 */
