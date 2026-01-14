@@ -73,6 +73,27 @@ code {}
 
 .note::before {}
 
+code {
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+}
+
+pre {
+    margin: 20px 0;
+    background-color: #dedede;
+    border-left: 3px solid rgb(96, 161, 189);
+}
+
+.note::before {
+    content: "❤️ ";
+}
+
+.note {
+    border-left: 3px solid red;
+    color: #808080;
+}
+
 /* Group 1 */
 .header {
     background-color: rgb(209, 232, 232);
@@ -129,26 +150,6 @@ code {}
     transform: translateX(460px);
 }
 
-code {
-    padding: 2px;
-    border-radius: 5px;
-    background-color: #eeeeee;
-}
-
-pre {
-    margin: 20px 0;
-    background-color: #dedede;
-    border-left: 3px solid rgb(96, 161, 189);
-}
-
-.note::before {
-    content: "❤️ ";
-}
-
-.note {
-    border-left: 3px solid red;
-    color: #808080;
-}
 /* Group 3 */
 /* Group 4 */
 /* Group 5 */
