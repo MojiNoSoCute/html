@@ -131,7 +131,6 @@ pre {
 }
 
 /* Group 2 */
-
 .position {
     display: flex;
 }
@@ -151,10 +150,33 @@ pre {
 }
 
 /* Group 3 */
+.img-fixed {
+            width: 260px;
+            height: 160px;
+            object-fit: cover;
+            }
+
 /* Group 4 */
+
+.obj-fit-image{
+                width: 800px;
+                height: 200px;
+                border: 1px solid black;
+                }
+                .obj-fit-image.contain { object-fit: contain; }
+                .obj-fit-image.fill { object-fit: fill; }
+                .obj-fit-image.cover { object-fit: cover; }
+
 /* Group 5 */
+
 /* Group 6 */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.gallery img { height: 120px; object-fit: cover; }
+
 /* Group 7 */
+.img-card6 { max-width:100%; height : auto; } 
+
 /* Group 8 */
+g
 /* Group 9 */
 /* Group 10 */
