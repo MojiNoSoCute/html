@@ -13,6 +13,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     background-color: rgb(175, 240, 240);
+
+    background-image: url("https://img.pikbest.com/origin/10/45/74/29fpIkbEsTzN6.jpg!w700wp");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
 }
 
 /* Component styles */
@@ -168,15 +173,54 @@ pre {
                 .obj-fit-image.cover { object-fit: cover; }
 
 /* Group 5 */
+    .YT-img {
+        transition: 0.5s ease;
+    }
+
+    .YT-img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
 
 /* Group 6 */
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.gallery img { height: 120px; object-fit: cover; }
+    .gallery { 
+        display: grid; 
+        grid-template-columns: 
+        repeat(3, 1fr); 
+        gap: 12px; 
+    }
+
+    .gallery img { 
+        height: 120px; 
+        object-fit: cover; 
+    }
 
 /* Group 7 */
-.img-card6 { max-width:100%; height : auto; } 
+    .img-card6 { 
+        max-width:100%; 
+        height : auto; 
+    } 
 
 /* Group 8 */
-g
+figure {
+    margin-top: 20px;
+    text-align: center;
+}
+
 /* Group 9 */
+.local-image {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ZBdSuf6C3tr3-o_315CCY4Xpw-E-Jj9ExQ&s");
+    background-size: cover;
+}
 /* Group 10 */
+.back-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #234b5c;
+    font-weight: bold;
+    
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+}
