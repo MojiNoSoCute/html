@@ -59,9 +59,9 @@
                 </div>
                 <div class="hero-item">
                     <h3>🎨 การออกแบบ UI/UX ที่ใช้งานง่าย</h3>
-                    <p>เทคนิคการทำให้เว็บไซต์โหลดเร็วขึ้น ตั้งแต่การ optimize รูปภาพ การใช้ CDN การ minify code
-                        และการวัดผลประสิทธิภาพด้วยเครื่องมือต่างๆ</p>
-                    <a href="" class="read-more">ดูรายละเอียด</a>
+                    <p>หลักการออกแบบส่วนติดต่อผู้ใช้ที่ดี เริ่มตั้งแต่การเลือกสีที่เหมาะสม การจัดวาง Typography
+                        และการสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจ</p>
+                    <a href="" class="read-more">เรียนรู้เพิ่ม</a>
                 </div>
                 <div class="hero-item">
                     <h3>⚡ การปรับปรุงประสิทธิภาพเว็บไซต์</h3>
@@ -109,11 +109,11 @@
                             <a href="">| read more</a>
                             <hr>
                             <div>
-                                <span>Tag:</span>
-                                <a href="">responsive</a>
-                                <a href="">design•media</a>
-                                <a href="">queries•flexbox•CSS</a>
-                                <a href="">grid</a>
+                                <span>Tags:</span>
+                                <a href="">responsive design</a>
+                                <a href="">media queries</a>
+                                <a href="">flexbox</a>
+                                <a href="">CSS grid</a>
                             </div>
                         </article>
                     </section>
@@ -189,16 +189,17 @@
                                 หรือองค์ประกอบที่ต้องเรียงต่อกัน</p>
                             <hr>
                             <div>
-                                <span>Tag:</span>
-                                <a href="">CSS•display</a>
-                                <a href="">property</a>
+                                <span>Tags:</span>
+                                <a href="">CSS</a>
+                                <a href="">display property</a>
                             </div>
                         </article>
                     </section>
 
-                    <!-- card 3 -->
+                    <!-- card 3 - Contact Form -->
                     <div class="card">
-                        <form id="contactForm" action="" method="">
+                        <h2 class="contact-title">📞 ติดต่อเรา</h2>
+                        <form id="contactForm" class="contact-form-main" action="" method="">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label class="form-label">ชื่อ *</label>
@@ -279,7 +280,8 @@
                 </div>
 
                 <!-- right sidebar -->
-                <div class="sidebar">
+                <aside class="sidebar">
+                    <!-- Widget 1: About -->
                     <div class="widget">
                         <div class="widget-title">สวัสดีครับ ยินดีต้อนรับ</div>
                         <p>
@@ -289,17 +291,71 @@
                         <div class="author-photo">รูปผู้เขียน</div>
                         <a href="#" class="btn-facebook">กดติดตามใน Facebook</a>
                     </div>
-                    <div class="card">right</div>
-                    <div class="card">right</div>
-                    <div class="card">right</div>
-                    <div class="card">right</div>
-                </div>
-                <main />
+
+                    <!-- Widget 2: Newsletter -->
+                    <div class="widget">
+                        <div class="widget-title">📧 รับข่าวสารใหม่</div>
+                        <form class="sidebar-form">
+                            <input type="text" class="form-input" placeholder="ชื่อของคุณ" style="margin-bottom: 10px;">
+                            <input type="email" class="form-input" placeholder="อีเมล" style="margin-bottom: 10px;">
+                            <select class="form-select" style="margin-bottom: 10px;">
+                                <option value="">สนใจเนื้อหาด้านไหน</option>
+                                <option value="ai">AI & Technology</option>
+                                <option value="web">Web Development</option>
+                                <option value="startup">Startup</option>
+                            </select>
+                            <button type="submit" class="form-button">🚀 สมัครเลย!</button>
+                        </form>
+                    </div>
+
+                    <!-- Widget 3: Quick Contact -->
+                    <div class="widget">
+                        <div class="widget-title">💬 ติดต่อด่วน</div>
+                        <form class="sidebar-form">
+                            <input type="text" class="form-input" placeholder="ชื่อ" style="margin-bottom: 10px;">
+                            <input type="text" class="form-input" placeholder="เรื่องที่ต้องการติดต่อ"
+                                style="margin-bottom: 10px;">
+                            <textarea class="form-input form-textarea" placeholder="ข้อความสั้นๆ"
+                                style="margin-bottom: 10px; min-height: 80px;"></textarea>
+                            <button type="submit" class="form-button">📤 ส่งเลย</button>
+                        </form>
+                    </div>
+
+                    <!-- Widget 4: Facebook Like Box -->
+                    <div class="widget">
+                        <div class="widget-title">กล่อง Facebook Like (ตัวอย่าง)</div>
+                        <div class="author-photo" style="height: 100px;">
+                            203,779 คนถูกใจ
+                        </div>
+                    </div>
+
+                    <!-- Widget 5: Sponsor -->
+                    <div class="widget">
+                        <div class="widget-title">Sponsor</div>
+                        <div class="author-photo" style="height: 200px;">
+                            พื้นที่โฆษณา / วิดีโอ
+                        </div>
+                    </div>
+                </aside>
+
+            </main>
+        </div>
+
+        <div class="wrapper">
+            
         </div>
     </div>
-    <footer>
 
+    <!-- Footer -->
+    <footer style="background-color: #2c2c2c; color: #ffffff; padding: 30px 0; text-align: center; margin-top: 50px;">
+        <div class="wrapper">
+            <p style="margin: 0; font-size: 14px;">© 2025 Suksawat — All rights reserved.</p>
+            <p style="margin: 5px 0 0 0; font-size: 12px; color: #aaa;">
+                Designed for educational/demo purposes • <a href="#" style="color: #1e8bc3;">Contact</a>
+            </p>
+        </div>
     </footer>
+
 </body>
 
 </html>
