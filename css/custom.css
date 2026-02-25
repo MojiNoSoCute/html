@@ -538,10 +538,10 @@ transform 0.2s ease; */
 
 /* FOoter */
 footer {
-  background-color: #2c2c2c; 
-  color: #ffffff; 
-  padding: 30px 0; 
-  text-align: center; 
+  background-color: #2c2c2c;
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
   margin-top: 50px;
 }
 
@@ -569,28 +569,32 @@ footer {
   border-collapse: collapse;
 }
 
-.price-table th ,td {
+.price-table th,
+td {
   border: 1px solid var(--line);
   padding: 10px 4px;
 }
 
-.price-table thead , .month {
+.price-table thead,
+.month {
   background-color: var(--bg01);
 }
 
 .num {
   text-align: right;
 }
-  
+
 .delta {
   text-align: center;
 }
 
-.num , .delta {
+.num,
+.delta {
   background-color: var(--bg03);
 }
 
-.price-table tr.total th , tr.total td{
+.price-table tr.total th,
+tr.total td {
   background-color: var(--bg02);
   font-weight: 600;
 }
@@ -610,7 +614,8 @@ footer {
   border-top: 10px solid var(--down);
 }
 
-.icon.up , .down {
+.icon.up,
+.down {
   margin-right: 5px;
 }
 
@@ -622,20 +627,27 @@ footer {
   color: var(--down);
 }
 
+/* order ลำดับใหม่ */
+  .order-widget01 { order: 5}
+  .order-widget02 { order: 4}
+  .order-widget03 { order: 1}
+  .order-widget04 { order: 2}
+  .order-widget05 { order: 3}
+
 /* responsive */
 
-@media (max-width: 922px){
+@media (max-width: 922px) {
   .site-header {
     background-color: yellow;
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .site-header {
     background-color: green;
   }
 
-  .hero-grid, 
+  .hero-grid,
   .content-layout,
   .form-row {
     grid-template-columns: 1fr;
@@ -659,7 +671,7 @@ footer {
   display: none;
 }
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
   .site-header {
     background-color: purple;
   }
@@ -676,7 +688,7 @@ footer {
   /* วาด "เส้น 3 ขีด" ด้วย span + pseudo elements */
   #burger-menu span,
   #burger-menu span::before,
-  #burger-menu span::after{
+  #burger-menu span::after {
     background-color: white;
     height: 3px;
     width: 100%;
@@ -687,29 +699,34 @@ footer {
   }
 
   /* จัดตำแหน่ง 3 เส้น (บน/กลาง/ล่าง) */
-  #burger-menu span {top: 11px}
-  #burger-menu span::before { top: -8px}
-  #burger-menu span::after { top: 8px}
+  #burger-menu span {
+    top: 11px;
+  }
+  #burger-menu span::before {
+    top: -8px;
+  }
+  #burger-menu span::after {
+    top: 8px;
+  }
 
-  
   /* Animation เมื่อกด */
 
   /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
   #burger-menu.close span {
-      background: transparent;
+    background: transparent;
   }
 
   /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
   /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
   #burger-menu.close span:before {
-      transform: rotate(45deg);
-      top: 0;
+    transform: rotate(45deg);
+    top: 0;
   }
 
   /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
   #burger-menu.close span:after {
-      transform: rotate(-45deg);
-      top: 0;
+    transform: rotate(-45deg);
+    top: 0;
   }
 
   /* ซ่อนเมนู */
@@ -723,4 +740,29 @@ footer {
     display: flex;
   }
 
+  /* สลับตำแหน่งของ card */
+
+  /* เรียงลำดับใหม่ด้วย order กรณีต้องการเปลี่ยนลำดับของ widget ใน sidebar หรือโพสใน post-list โดยไม่ต้องแก้ html ต้องกำหนด display:flex ให้กับ post-list และ sidebar ก่อน */
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* เลขน้อยสุดอยู่บนสุด */
+  .order-image { order: 3;}
+
+  .order-table { order: 2;}
+
+  .order-form { order: 1;}
+
+  .order-widget01 { order: 5}
+  .order-widget02 { order: 2}
+  .order-widget03 { order: 1}
+  .order-widget04 { order: 4}
+  .order-widget05 { order: 3}
 }
+
+
+
+
