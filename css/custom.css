@@ -628,11 +628,21 @@ tr.total td {
 }
 
 /* order ลำดับใหม่ */
-  .order-widget01 { order: 5}
-  .order-widget02 { order: 4}
-  .order-widget03 { order: 1}
-  .order-widget04 { order: 2}
-  .order-widget05 { order: 3}
+.order-widget01 {
+  order: 5;
+}
+.order-widget02 {
+  order: 4;
+}
+.order-widget03 {
+  order: 1;
+}
+.order-widget04 {
+  order: 2;
+}
+.order-widget05 {
+  order: 3;
+}
 
 /* responsive */
 
@@ -750,19 +760,32 @@ tr.total td {
   }
 
   /* เลขน้อยสุดอยู่บนสุด */
-  .order-image { order: 3;}
+  .order-image {
+    order: 3;
+  }
 
-  .order-table { order: 2;}
+  .order-table {
+    order: 2;
+  }
 
-  .order-form { order: 1;}
+  .order-form {
+    order: 1;
+  }
 
-  .order-widget01 { order: 5}
-  .order-widget02 { order: 2}
-  .order-widget03 { order: 1}
-  .order-widget04 { order: 4}
-  .order-widget05 { order: 3}
+  .order-widget01 {
+    order: 5;
+  }
+  .order-widget02 {
+    order: 2;
+  }
+  .order-widget03 {
+    order: 1;
+  }
+  .order-widget04 {
+    order: 4;
+  }
+  .order-widget05 {
+    order: 3;
+  }
+  
 }
-
-
-
-
