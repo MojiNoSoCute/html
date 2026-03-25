@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="เว็ปไซด์แนะนำสถานที่ท่องเที่ยวในจังหวัด พร้อมข้อมูลและภาพประกอบที่น่าสนใจ">
+    <title>Responsive Web Test (วัชรากร)</title>
+
+    <!-- ให้ นศ. เพิ่มลิงค์ Google Fonts เอง 1 font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+    <!-- ตรวจสอบส่วน head ให้ดีว่ามีอะไรขาดหายไปอีกบ้าง ถ้ามีก็ใส่ให้ครบ -->
+
+
+    <!-- เขียน style sheet เพิ่มเติมให้ใกล้เคียงกับตัวอย่าง -->
+    <style>
+        /* ========== Reset เบื้องต้น ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-padding-top: 200px;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "Sriracha", "Segoe UI", Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f7fb;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ========== ใช้รวม ๆ ========== */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        /* ========== Header ========== */
+        .nav-list a {
+            color: #333;
+            font-weight: 500;
+            padding: 8px 12px;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: #84aaca;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style-type: none;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 5px 5px 15px rgb(167, 167, 167);
+
+            position: sticky;
+            top: 0;
+            width: 100%;
+
+            h1 {
+                color: #527fa5;
+            }
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+        }
+
+
+        /* ========== Hero ========== */
+        .hero {
+            padding: 70px 0;
+            background: linear-gradient(to right, #bcdde7, #f9fbff);
+        }
+
+        .grid-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .hero-left {
+            margin: auto;
+
+            h2 {
+            font-size: 40px;
+            color: #ca4545;
+            margin: 20px 0;
+            }
+
+            p {
+                color: rgb(90, 90, 90);
+            }
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            color: white;
+            padding: 5px 10px;
+            background-color: rgb(116, 175, 223);
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(61, 130, 187);
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 25px;
+            box-shadow: 5px 5px 15px gray;
+        }
+
+        /*places section */
+        .top-place {
+            text-align: center;
+            margin: 40px;
+
+            h2 {
+                color: #6b94b6;
+                font-size: 35px;
+            }
+
+            p {
+                color: rgb(90, 90, 90);
+            }
+        }
+
+        .card-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 380px;
+            height: auto;
+            border-radius: 25px;
+            box-shadow: 5px 5px 15px gray;
+            overflow: hidden;
+
+            transition: 0.3s;
+
+            img {
+                height: 270px;
+                width: 100%;
+                object-fit: fill;
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-20px);
+        }
+
+        .title {
+            padding: 20px;
+
+            h3 {
+                color: #6b94b6;
+            }
+
+            p {
+                font-size: 15px;
+                color: rgb(90, 90, 90);
+            }
+
+            .btn-secondary {
+                color: white;
+                padding: 5px 10px;
+                background-color: rgb(116, 175, 223);
+                border-radius: 5px;
+            }
+
+            .btn-secondary:hover {
+                background-color: rgb(58, 114, 160);
+
+            }
+        }
+
+        /* footer */
+        footer {
+            color: white;
+            background-color: rgb(69, 166, 199);
+            padding: 20px;
+            font-size: 15px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        /* =====เขียน style sheet เพิ่มเติม เพื่อให้รองรับการ responsive ด้านล่าง ========== */
+
+        /* ========== โดยทุกอย่างต้องแสดงเป็น 1 คอลัมน์ เหมือนตัวอย่าง ========== */
+        @media (max-width: 768px) {
+            html {
+            scroll-padding-top: 350px;
+            }
+            .header {
+                text-align: center;
+                display: block;
+            }
+
+            .nav-list {
+            display: block;
+                
+                li {
+                    padding: 20px;
+                }
+            }
+
+            .grid-hero {
+            display: grid;
+            grid-template-columns: 1fr;
+            }
+
+            .card-section {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            margin-bottom: 20px;
+
+                .card {
+                    width: 100%;
+                }
+
+                .card:hover {
+                    transform: none;
+                }
+            }
+
+            .footer {
+            display: block;
+            text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header">
+                <h1 class="brand">เที่ยวเมืองน่าไป [นครปฐม]</h1>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="#">หน้าแรก</a></li>
+                        <li><a href="#2">สถานที่ท่องเที่ยว</a></li>
+                        <li><a href="#3">ติดต่อ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="grid-hero">
+                    <div class="hero-left">
+                        <p>จังหวัดท่องเที่ยวแนะนำ</p>
+                        <h2>ค้นพบเสน่ห์ของเมืองท่องเที่ยวที่คุณไม่ควรพลาด</h2>
+                        <p>สัมผัสธรรมชาติ วัฒนธรรม และอาหารท้องถิ่นที่น่าสนใจ
+                            พร้อมสถานที่ยอดนิยมที่เหมาะสำหรับการพักผ่อนในวันหยุด</p>
+                        <div class="btn"><a href="#" class="btn-primary">อ่านเพิ่มเติม</a></div>
+                    </div>
+                    <div class="hero-right">
+                        <img class="hero-img"
+                            src="https://img.kapook.com/u/2020/pattra/pattravel202008/shutterstock_517972276.jpg"
+                            alt="ภาพสถานที่ท่องเที่ยว" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Places Section - สถานที่ท่องเที่ยวแนะนำ -->
+        <section>
+            <div class="container">
+                <div class="top-place" id="2">
+                    <h2>สถานที่ท่องเที่ยวแนะนำ</h2>
+                    <p>ตัวอย่างสถานที่ท่องเที่ยวที่น่าสนใจในจังหวัด</p>
+                </div>
+                <div class="card-section">
+                    <article class="card">
+                        <img src="https://www.chillpainai.com/src/wewakeup/scoop/images/4317883cd559c408c06ef3b45488ba0f12034d50.jpg"
+                            alt="ภูเขาและธรรมชาติ" />
+                        <div class="title">
+                            <h3>อุทยานธรรมชาติ</h3>
+                            <p>
+                                เหมาะสำหรับผู้ที่ชอบบรรยากาศธรรมชาติ อากาศดี
+                                และกิจกรรมเดินชมวิว
+                            </p>
+                            <div class="btn"><a href="#" class="btn-secondary">อ่านเพิ่มเติม</a></div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://checkinchill.com/storage/content/eaabfd77-6aad-417b-b5e0-d852381cbe25.webp"
+                            alt="ภูเขาและธรรมชาติ" />
+                        <div class="title">
+                            <h3>อุทยานธรรมชาติ</h3>
+                            <p>
+                                เหมาะสำหรับผู้ที่ชอบบรรยากาศธรรมชาติ อากาศดี
+                                และกิจกรรมเดินชมวิว
+                            </p>
+                            <div class="btn"><a href="#" class="btn-secondary">อ่านเพิ่มเติม</a></div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://cms.dmpcdn.com/travel/2023/04/19/305dc6f0-de9c-11ed-8a8a-ef7953829fb6_webp_original.jpg"
+                            alt="ภูเขาและธรรมชาติ" />
+                        <div class="title">
+                            <h3>อุทยานธรรมชาติ</h3>
+                            <p>
+                                เหมาะสำหรับผู้ที่ชอบบรรยากาศธรรมชาติ อากาศดี
+                                และกิจกรรมเดินชมวิว
+                            </p>
+                            <div class="btn"><a href="#" class="btn-secondary">อ่านเพิ่มเติม</a></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer" id="3">
+                <div class="footer-left">
+                    <p>©2026 เที่ยวเมืองน่าไป (วัชรากร เอี่ยมสำอางค์). All Rights Reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <span>Email: 674259013@webmail.npru.ac.th</span>
+                    <span>Facebook: เที่ยวเมืองน่าไป (Nakhon Pathom)</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
